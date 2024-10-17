@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmRec</title>
+    <link rel="stylesheet" href="MoviesRec.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FilmRec</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <span id="userEmail" class="user-email"></span>
+            <button id="loginBtn" class="login-btn">Login/Sign Up</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="introSection">
+            <h2>Welcome to FilmRec</h2>
+            <p>Pick a day, choose your movie, and find the best location to watch it.</p>
+            <button id="chooseDateBtn">Choose a Date</button>
+        </section>
+
+        <!-- Date input box -->
+        <section class="date-input-container" id="dateInputContainer">
+            <input type="text" id="dateInput" placeholder="MM/DD" maxlength="5" />
+            <button id="submitDateBtn">Submit</button>
+        </section>
+
+        <!-- Movie search bar -->
+        <section class="movie-search-container" id="movieSearchContainer" style="display: none;">
+            <input type="text" id="movieSearchInput" placeholder="Search for a movie..." />
+            <button id="searchMovieBtn">Search</button>
+        </section>
+
+        <!-- Container to display the search results -->
+        <section id="movieResults" class="movie-results"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FilmRec. All rights reserved.</p>
+    </footer>
+
+    <script src="MoviesRec.js"></script>
+</body>
+</html>

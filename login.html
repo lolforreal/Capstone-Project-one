@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="email" id="emailInput" placeholder="Enter your email">
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <button id="loginSubmitBtn">Login</button>
+    </div>
+
+    <script>
+        document.getElementById('loginSubmitBtn').addEventListener('click', function() {
+            const email = document.getElementById('emailInput').value;
+            const password = document.getElementById('passwordInput').value;
+
+            // Simple validation (ensure both fields are filled)
+            if (email && password) {
+                // Send the email back to the main window
+                window.opener.postMessage({ email: email }, '*');
+                
+                // Close the login window
+                window.close();
+            } else {
+                alert('Please enter both email and password.');
+            }
+        });
+    </script>
+
+</body>
+</html>
