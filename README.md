@@ -95,9 +95,9 @@ FilmRec/
 
 ---
 
-## License
+## URL
 
-This project is licensed under the MIT License.
+https://movierec-jp0r.onrender.com
 
 ---
 
